@@ -329,10 +329,11 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 37px;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-bottom: 30px;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+
 }
 
 .modal-title {
@@ -343,7 +344,6 @@ li {
   margin-right: auto;
   letter-spacing: 0.03em;
   color: var(--black-color);
-
 }
 
 .person-name {
@@ -358,13 +358,13 @@ li {
   fill: var(--main-blue-color);
 }
 
-    .icon-name {
-    position: absolute;
-    margin-top: 11px;
-    margin-left: 12px;
-    width: 18px;
-    height: 18px;
-    }
+.icon-name {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 12px;
+  width: 18px;
+  height: 18px;
+}
 
 .person-tel {
   margin-top: 10px;
@@ -374,8 +374,8 @@ li {
   position: absolute;
   margin-top: 11px;
   margin-left: 12px;
-      width: 18px;
-        height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 .person-tel-field {
@@ -426,27 +426,21 @@ li {
   position: absolute;
   margin-top: 11px;
   margin-left: 12px;
-      width: 18px;
-        height: 18px;
+  width: 18px;
+  height: 18px;
 }
-
 .person-mail-field {
   position: relative;
 }
-
 .person-mail-field:focus-within .icon-mail {
   fill: var(--main-blue-color);
 }
-
 .person-comment {
   margin-top: 10px;
 }
-
-
 .chekbox-input {
   appearance: none;
 }
-
 .chekbox-lable {
   position: relative;
   margin-top: 20px;
@@ -474,7 +468,7 @@ li {
   width: 16px;
   height: 15px;
   background-image: url("../images/icon-check.svg");
-  fill: var(--black-color);
+ 
   content: '';
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -482,10 +476,18 @@ li {
 
 .chekbox-input:checked+.chekbox-lable::after {
   opacity: 1;
+
 }
-.chekbox-input:focus+ .chekbox-lable{
-  color:var(--main-blue-color);
-  border-color: var(--main-blue-color);
+
+.chekbox-input:focus+.chekbox-lable::before  {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    border: 1px solid var(--main-blue-color);
+    border-radius: 2px;
+    content: '';
 }
 
 
@@ -647,7 +649,6 @@ li {
 }
 
 .our-team-background {
-  max-width: 1600px;
   background-color: var(--section-light-bg);
   margin: 0 auto;
 }
